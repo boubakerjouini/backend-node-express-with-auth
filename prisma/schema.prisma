@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:root@localhost:8889/fatma"
+}
+
+model Users {
+  id        String  @id @unique(map: "id") @db.VarChar(256)
+  nom       String  @db.VarChar(256)
+  prenom    String  @db.VarChar(256)
+  role      String  @db.VarChar(256)
+  token     String  @db.VarChar(256)
+  status    Boolean
+  password  String  @db.VarChar(256)
+  createdAt String  @db.VarChar(256)
+  updatedAt String  @db.VarChar(256)
+}
